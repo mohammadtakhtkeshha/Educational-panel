@@ -1,16 +1,20 @@
 import React from "react";
 import logo from "../../../assest/img/logo.jpg";
+import googleLogo from "../../../assest/img/googleLogo.png";
+import spark from "../../../assest/img/spark.png";
+
 import {
   Input,
   Col,
   Row,
-  Button,
+ 
   Divider,
   Typography,
   Checkbox,
   Image,
   Space,
   Layout,
+  Button,
 } from "antd";
 const { Title, Paragraph, Text, Link } = Typography;
 const DemoBox = (props) => (
@@ -19,7 +23,7 @@ const DemoBox = (props) => (
 
 const centerStyle = {
   width: "80%",
-  background: "red",
+  background: "",
 };
 const contentStyle = {
   textAlign: "center",
@@ -27,76 +31,96 @@ const contentStyle = {
   minHeight: "93vh",
   // lineHeight: '120px',
   color: "#fff",
-  backgroundColor: "#108ee9",
+  backgroundColor: "#FFF",
 };
 export default function Login() {
   return (
     <Layout style={contentStyle}>
-      <Row justify="center">
+      <Row justify="center" >
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
           <Row justify="center" align="middle" style={{ height: "100vh" }}>
             <div style={centerStyle}>
-              <Row style={{ textAlign: "left" }}>
+              <Row >
+
+                
+                <Col xs={16}>
+                <Image width={"50px"} height={"10vh"} src={spark} />
+                  <Title style={{fontSize:"25px" ,fontWeight: "bold"}}>Login</Title>
+              
+                
+                </Col>
+              </Row>
                 <Col xs={24}>
-                  <Title>Login</Title>
-                  <Paragraph>
+                  <Paragraph style={{color:"5D5977"}}>
                     see your growth and get consulting support!
                   </Paragraph>
                 </Col>
-              </Row>
+               
+             
               <Row justify="center">
                 <Col xs={24} sm={4} md={6} lg={8} xl={12}>
-                  <Space.Compact block>
-                    <Input
-                      placeholder="sing in with Google"
-                      style={{ borderRadius: "15px" }}
-                    />
-                  </Space.Compact>
+                 
+             <Space 
+               direction="vertical"
+               style={{
+                 width: '100%'
+                
+               }}
+             >
+                  <Col xs={24}>
+
+             <Button style={{   width:"100%" , borderRadius:"15px"}}>
+              
+             <Image width={"40px"} height={"4vh"} src={googleLogo} />
+              sign with google</Button>
+           
+            </Col>
+             </Space>
+               
                 </Col>
               </Row>
               <Row justify="center">
                 <Col xs={24}>
-                  <Divider>or sing in with Email</Divider>
+                  <Divider style={{color:"#D5D2E1"}}>or sing in with Email</Divider>
                 </Col>
               </Row>
-              <Row justify="center">
+              <Row justify="center" style={{display:"flex"}}>
                 <Col xs={24} sm={4} md={6} lg={8} xl={12}>
-                  <Text>Email*</Text>
+                  <Text style={{display:'flex'}}>Email*</Text>
                   <Input
                     placeholder="rtl@websaite.com"
                     style={{ borderRadius: "15px" }}
                   />
 
-                  <Text>password*</Text>
+                  <Text style={{display:'flex'}}>password*</Text>
                   <Input
                     placeholder="Min. 8 character"
                     style={{ borderRadius: "15px" }}
                   />
+              
+                <Checkbox style={{display:"flex"}}>Remember me</Checkbox>
                 </Col>
               </Row>
 
-              <Row justify="space-between">
-                <Col xs={12}>
-                  <Checkbox>Remember me</Checkbox>
-                </Col>
-                <Col xs={12}>
-                  <Link>forget password</Link>
-                </Col>
+              <Row>
+                <Col xs={12}  >
+              
+              {/* <Link style={{display:"flex"}}>forget password?</Link> */}
+                  </Col>
               </Row>
               <Row justify="center">
-                <Col xs={24} xl={12}>
-                  <Input
-                    placeholder="Min. 8 character"
-                    style={{ borderRadius: "15px", background: "blue" }}
-                  />
+                <Col xs={12}>
+             
+                 <Button style={{color:"white" , background:"#5138EE" , width:"100%" , borderRadius:"15px"}}>Login</Button>
+               
                 </Col>
               </Row>
-              <Col xs={12}>
+              <Col xs={24}>
                 <Text>not registered yet?</Text>
                 <Link>create an Account</Link>
               </Col>
               <Col xs={24} xl={12}>
-                <Text>@2020 Felix All rights reserved</Text>
+                <Text >@2020 Felix All rights reserved</Text>
               </Col>
             </div>
           </Row>
