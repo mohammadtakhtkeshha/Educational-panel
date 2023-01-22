@@ -86,19 +86,23 @@ export default function Login() {
               </Row>
               <Row justify="center" style={{display:"flex"}}>
                 <Col xs={24} sm={4} md={6} lg={8} xl={12}>
+                  <Space  direction="vertical" size="middle"  style={{ display: 'flex' }}>
+
                   <Text style={{display:'flex'}}>Email*</Text>
                   <Input
                     placeholder="rtl@websaite.com"
                     style={{ borderRadius: "15px" }}
-                  />
-
+                    />
+                    </Space>
+                    <Space  direction="vertical" size="middle"  style={{ display: 'flex' }}>
                   <Text style={{display:'flex'}}>password*</Text>
                   <Input
                     placeholder="Min. 8 character"
                     style={{ borderRadius: "15px" }}
                   />
+                </Space>
               
-                <Checkbox style={{display:"flex"}}>Remember me</Checkbox>
+                <Checkbox style={{display:"flex" ,marginTop:'10px'}}>Remember me</Checkbox>
                 </Col>
               </Row>
 
@@ -110,19 +114,23 @@ export default function Login() {
               </Row>
               <Row justify="center">
                 <Col xs={12}>
-             
-                 <Button style={{color:"white" , background:"#5138EE" , width:"100%" , borderRadius:"15px"}}>Login</Button>
+                  
+                 <Button style={{color:"white" ,marginTop:'20px', background:"#5138EE" , width:"100%" , borderRadius:"15px"}}>Login</Button>
                
                 </Col>
               </Row>
-              <Col xs={24}>
+                
+              <Col xs={24} style={{marginTop:'5%'}}>
                 <Text>not registered yet?</Text>
                 <Link>create an Account</Link>
               </Col>
-              <Col xs={24} xl={12}>
-                <Text >@2020 Felix All rights reserved</Text>
-              </Col>
+                
+            
             </div>
+            <Col xs={24} xl={12}>
+              
+              <Text style={{marginTop:'30%'}} >@2020 Felix All rights reserved</Text>
+              </Col>
           </Row>
         </Col>
 
